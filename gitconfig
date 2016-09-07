@@ -1,0 +1,29 @@
+[core]
+	editor = emacs
+
+[user]
+	email = clark.richards@gmail.com
+	name = Clark Richards
+
+[alias]
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    st = status
+    sts = status -s
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log -p
+    ft = fetch
+    mg = merge
+    pl = pull
+    ps = push
+
+[gui]
+	recentrepo = /Users/richardsc/school/thesis
+[filter "media"]
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
+[push]
+	default = current

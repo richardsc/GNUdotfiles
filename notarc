@@ -1,0 +1,8 @@
+db = "~/Dropbox/nota.db"
+pretty = "oneline" # comment
+showID = False
+colorize = True
+color = "bubblegum"
+#color.hash = "31m"   # 
+#color.title = "1m"   # 
+#color.keyword = "35m" # 
