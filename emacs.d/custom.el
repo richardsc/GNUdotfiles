@@ -4,18 +4,18 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(LaTeX-command "latex -synctex=1")
- '(TeX-PDF-mode t)
+ '(TeX-PDF-mode t t)
  '(TeX-view-program-list
    (quote
     (("Preview" "open -a Preview.app %o")
-     ("Skim" "open -a Skim.app %o"))))
+     ("Skim" "open -a Skim.app %o"))) t)
  '(TeX-view-program-selection
    (quote
     (((output-dvi style-pstricks)
       "dvips and gv")
      (output-dvi "xdvi")
      (output-pdf "Skim")
-     (output-html "xdg-open"))))
+     (output-html "xdg-open"))) t)
  '(ansi-color-names-vector
    ["black" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "white"])
  '(bm-repository-file "/Users/richardsc/Dropbox/emacs/bm-repository")
@@ -51,5 +51,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "gray20" :foreground "white smoke" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 110 :width normal :foundry "apple" :family "Monaco"))))
+ '(default ((t (:inherit nil :stipple nil :background "gray20" :foreground "white smoke" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
  '(hl-line ((t (:inherit highlight :background "grey28")))))
