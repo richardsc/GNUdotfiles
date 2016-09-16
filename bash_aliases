@@ -7,6 +7,7 @@ alias less='less -eX'
 alias hh='history 20'
 
 # Application aliases
+alias open='xdg-open'
 alias xv='xviewer'
 alias emacs='emacs -q'
 alias e='emacs'
