@@ -4,9 +4,9 @@
 
 (server-start)
 
-(add-to-list 'load-path "~/.emacs.d")
-(require 'edit-server)
-(edit-server-start)
+(when (require 'edit-server nil t)
+    (setq edit-server-new-frame nil)
+    (edit-server-start))
 
 ;; initial window
 (setq initial-frame-alist
