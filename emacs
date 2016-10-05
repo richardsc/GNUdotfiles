@@ -272,11 +272,11 @@
 ;; =====================================================
 ;; Sublimity
 ;; =====================================================
-(require 'sublimity)
+;; (require 'sublimity)
 ;;(sublimity-global-mode)
 ;;(require 'sublimity-scroll)
 ;; (setq sublimity-scroll-weight 10
 ;;       sublimity-scroll-drift-length 5)
-(require 'sublimity-map)
-(sublimity-map-set-delay nil)
+;; (require 'sublimity-map)
+;; (sublimity-map-set-delay nil)
 
