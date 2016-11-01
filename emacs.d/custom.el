@@ -7,14 +7,14 @@
  '(TeX-PDF-mode t t)
  '(TeX-view-program-list
    (quote
-    (("Preview" "open -a Preview.app %o")
+    (("mupdf" "mupdf %o")
      ("Skim" "open -a Skim.app %o"))) t)
  '(TeX-view-program-selection
    (quote
     (((output-dvi style-pstricks)
       "dvips and gv")
      (output-dvi "xdvi")
-     (output-pdf "Skim")
+     (output-pdf "mupdf")
      (output-html "xdg-open"))) t)
  '(ansi-color-names-vector
    ["black" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "white"])
