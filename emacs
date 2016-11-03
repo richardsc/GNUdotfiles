@@ -97,12 +97,12 @@
 ;; ======================================================================
 ;; Flyspell mode
 ;; ======================================================================
-(setq ispell-program-name "/usr/local/bin/aspell")
+;; (setq ispell-program-name "/usr/local/bin/aspell")
 (autoload 'flyspell-mode "flyspell" "On-the-fly spelling checker." t)
 (global-set-key (kbd "C-c j") 'flyspell-check-previous-highlighted-word)
 
 ; set aspell to use the custom dictionary that has had words removed
-(setq ispell-extra-args '("--master=custom"))
+;; (setq ispell-extra-args '("--master=custom"))
 
 ;; ======================================================================
 ;; Markdown mode
