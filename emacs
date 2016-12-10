@@ -280,3 +280,7 @@
 ;; (require 'sublimity-map)
 ;; (sublimity-map-set-delay nil)
 
+;; ====================================================
+;; Flycheck
+;; ====================================================
+(add-hook 'after-init-hook #'global-flycheck-mode)
