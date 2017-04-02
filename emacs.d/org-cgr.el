@@ -38,3 +38,5 @@
 (setq org-export-babel-evaluate nil)
 (set-face-attribute 'org-block-background nil :background "black")
 (setq org-image-actual-width 450)
+(add-hook 'org-babel-after-execute-hook 'org-display-inline-images)   
+(add-hook 'org-mode-hook 'org-display-inline-images)   
