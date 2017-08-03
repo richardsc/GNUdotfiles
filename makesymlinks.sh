@@ -31,7 +31,7 @@ for file in $files; do
 done
 
 # lets add a few specific symlinks for non-dotfiles in ~/bin
-bindir=~/git/dotfiles/bin
+bindir=~/git/GNUdotfiles/bin
 binolddir=~/bin/bin_old
 binfiles="bashmarks.sh displayreadme ipadsync markdown mterm rterm tree v t.py matlabcmd histmatch"
 
