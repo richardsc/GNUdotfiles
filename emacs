@@ -249,7 +249,7 @@
 ;; =====================================================
 ;; (add-to-list 'load-path "~/.emacs.d/elpa/matlab-mode-20141227.1244/")
 (add-to-list 'load-path "~/.emacs.d/matlab-mode/")
-(require 'matlab-load)
+;;(require 'matlab-load)
 ;; Enable CEDET feature support for MATLAB code. (Optional)
 (matlab-cedet-setup)
 (setq auto-mode-alist

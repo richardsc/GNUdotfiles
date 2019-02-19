@@ -46,7 +46,7 @@
  '(matlab-fill-code nil)
  '(package-selected-packages
    (quote
-    (undo-tree sublimity powerline polymode pandoc-mode matlab-mode markdown-mode lorem-ipsum ido-vertical-mode flycheck ess edit-server bm auctex ac-octave ac-math)))
+    (poly-R poly-markdown poly-noweb poly-org undo-tree sublimity powerline polymode pandoc-mode matlab-mode markdown-mode lorem-ipsum ido-vertical-mode flycheck ess edit-server bm auctex ac-octave ac-math)))
  '(show-paren-mode t)
  '(text-mode-hook (quote (text-mode-hook-identify)))
  '(tool-bar-mode nil))
