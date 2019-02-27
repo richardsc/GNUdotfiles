@@ -4,7 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(LaTeX-command "latex -synctex=1")
- '(TeX-PDF-mode t t)
+ '(TeX-PDF-mode t)
  '(TeX-view-program-list
    (quote
     (("mupdf" "mupdf %o")
@@ -46,7 +46,7 @@
  '(matlab-fill-code nil)
  '(package-selected-packages
    (quote
-    (poly-R poly-markdown poly-noweb poly-org undo-tree sublimity powerline polymode pandoc-mode matlab-mode markdown-mode lorem-ipsum ido-vertical-mode flycheck ess edit-server bm auctex ac-octave ac-math)))
+    (company-bibtex company-auctex company poly-R poly-markdown poly-noweb poly-org undo-tree sublimity powerline polymode pandoc-mode matlab-mode markdown-mode lorem-ipsum ido-vertical-mode flycheck ess edit-server bm auctex ac-octave ac-math)))
  '(show-paren-mode t)
  '(text-mode-hook (quote (text-mode-hook-identify)))
  '(tool-bar-mode nil))

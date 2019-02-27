@@ -161,6 +161,7 @@
 ;; ESS
 ;; =================================================
 (require 'ess-site)
+(setq ess-use-company t)
 ;;(setq ess-use-auto-complete t)
 (ess-set-style 'RStudio)
 (define-key ess-r-mode-map "_" #'ess-insert-assign)
@@ -185,23 +186,32 @@
 ;; (add-hook 'ido-setup-hook 'ido-define-keys)
 
 ;; =================================================
+;; company-mode
+;; =================================================
+(add-hook 'after-init-hook 'global-company-mode)
+(require 'company-auctex)
+(company-auctex-init)
+(require 'company-bibtex)
+(add-to-list 'company-backends 'company-bibtex)
+
+;; =================================================
 ;; auto-complete
 ;; =================================================
-(require 'auto-complete)
-(require 'auto-complete-config)
-(ac-config-default)
+;; (require 'auto-complete)
+;; (require 'auto-complete-config)
+;; (ac-config-default)
 
-(require 'ac-math) 
-(add-to-list 'ac-modes 'latex-mode)   ; make auto-complete aware of `latex-mode`
+;; (require 'ac-math) 
+;; (add-to-list 'ac-modes 'latex-mode)   ; make auto-complete aware of `latex-mode`
 
-(defun ac-latex-mode-setup ()         ; add ac-sources to default ac-sources
-  (setq ac-sources
-     (append '(ac-source-math-latex ac-source-latex-commands)
-               ac-sources)))
-(add-hook 'LaTeX-mode-hook 'ac-latex-mode-setup)
-(ac-flyspell-workaround)
-;(global-auto-complete-mode t)
-(setq ac-math-unicode-in-math-p nil)
+;; (defun ac-latex-mode-setup ()         ; add ac-sources to default ac-sources
+;;   (setq ac-sources
+;;      (append '(ac-source-math-latex ac-source-latex-commands)
+;;                ac-sources)))
+;; (add-hook 'LaTeX-mode-hook 'ac-latex-mode-setup)
+;; (ac-flyspell-workaround)
+;; ;(global-auto-complete-mode t)
+;; (setq ac-math-unicode-in-math-p nil)
 
 ;; =================================================
 ;; lorem-ipsum
