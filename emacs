@@ -164,6 +164,7 @@
 (setq ess-use-company t)
 ;;(setq ess-use-auto-complete t)
 (ess-set-style 'RStudio)
+(setq ess-indent-level 4)
 (define-key ess-r-mode-map "_" #'ess-insert-assign)
 (define-key inferior-ess-r-mode-map "_" #'ess-insert-assign)
 
