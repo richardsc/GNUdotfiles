@@ -25,6 +25,7 @@ alias readme='displayreadme'
 alias netmon='lsof -P -i -n | cut -f 1 -d " " | uniq'
 alias boce='g oce; git pl; cd ..; make oce'
 alias r='radian'
+alias jupyter-notebook='~/.local/bin/jupyter-notebook --no-browser'
 
 # Show git branch and status at bash prompt
 function parse_git_dirty {
@@ -58,7 +59,7 @@ pwd |rev| awk -F / '{print $1,$2}' | rev | sed s_\ _/_
 } 
 
 ## export PS1='\h:\[\033[1;33m\]\W\[\033[0m\]'
-export PS1='\h:\[\033[1;33m\]$(last_two_dirs)/\[\033[0m\]'
+export PS1='\h:\[\033[1;34m\]$(last_two_dirs)/\[\033[0m\]'
 export PS1="$PS1\$(parse_git_branch)"
 # export PS1="$PS1\$(count_tasks)"
 # export PS1="\[\033[0;31m\]\$(count_todo)\[\033[0m\]$PS1"
