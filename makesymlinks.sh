@@ -8,7 +8,7 @@
 
 dir=~/git/GNUdotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="emacs emacs.d/custom.el emacs.d/org-cgr.el bashrc bash_aliases Rprofile gitconfig latexmkrc nbrc notarc bm-repository octaverc"    # list of files/folders to symlink in homedir
+files="emacs emacs.d/custom.el emacs.d/org-cgr.el bashrc bash_aliases Rprofile gitconfig latexmkrc nbrc notarc bm-repository octaverc radian_profile"    # list of files/folders to symlink in homedir
 
 ##########
 
