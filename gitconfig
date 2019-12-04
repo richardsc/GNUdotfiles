@@ -27,3 +27,5 @@
 	required = true
 [push]
 	default = current
+[credential]
+	helper = cache

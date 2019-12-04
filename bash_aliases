@@ -24,6 +24,7 @@ alias t='python ~/bin/t.py --task-dir . --list tasks'
 alias readme='displayreadme'
 alias netmon='lsof -P -i -n | cut -f 1 -d " " | uniq'
 alias boce='g oce; git pl; cd ..; make oce'
+alias r='radian'
 
 # Show git branch and status at bash prompt
 function parse_git_dirty {
