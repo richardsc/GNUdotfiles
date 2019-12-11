@@ -123,3 +123,6 @@ export DISPLAY
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
+
+# Add /usr/local/bin to $PATH (to get julia to work)
+export PATH=$PATH:/usr/local/bin
