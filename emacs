@@ -141,21 +141,6 @@
 (global-set-key (kbd "C-x C-k f") 'beamer-insert-frame)
 (put 'narrow-to-region 'disabled nil)
 
-;; =================================================
-;; Polymode -- for editing Rmarkdown files
-;; =================================================
-;; (setq load-path
-;;       (append '("~/git/polymode/"  "~/git/polymode/modes")
-;;               load-path))
-(require 'poly-R)
-(require 'poly-markdown)
-;;; MARKDOWN
-;; (add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
-
-;; ;;; R modes
-;; (add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
-;; (add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
-;; (add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
 
 ;; =================================================
 ;; ESS
@@ -167,6 +152,23 @@
 (setq ess-indent-level 4)
 ;(define-key ess-r-mode-map "_" #'ess-insert-assign)
 ;(define-key inferior-ess-r-mode-map "_" #'ess-insert-assign)
+
+;; =================================================
+;; Polymode -- for editing Rmarkdown files
+;; =================================================
+;; (setq load-path
+;;       (append '("~/git/polymode/"  "~/git/polymode/modes")
+;;               load-path))
+(require 'poly-R)
+(require 'poly-markdown)
+(require 'poly-noweb)
+;;; MARKDOWN
+;; (add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
+
+;; ;;; R modes
+(add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
+(add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
+(add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
 
 ;; =================================================
 ;; IDO mode
