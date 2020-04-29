@@ -88,10 +88,10 @@
 ;; ======================================================================
 ;; Org mode
 ;; ======================================================================
-(load-file "~/.emacs.d/org-cgr.el")
+;; (load-file "~/.emacs.d/org-cgr.el")
 
 ;; Mac specific stuff
-(setq mac-command-modifier 'meta)
+;; (setq mac-command-modifier 'meta)
 (setq x-select-enable-clipboard t)
 
 ;; ======================================================================
@@ -141,21 +141,6 @@
 (global-set-key (kbd "C-x C-k f") 'beamer-insert-frame)
 (put 'narrow-to-region 'disabled nil)
 
-;; =================================================
-;; Polymode -- for editing Rmarkdown files
-;; =================================================
-;; (setq load-path
-;;       (append '("~/git/polymode/"  "~/git/polymode/modes")
-;;               load-path))
-(require 'poly-R)
-(require 'poly-markdown)
-;;; MARKDOWN
-;; (add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
-
-;; ;;; R modes
-;; (add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
-;; (add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
-;; (add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
 
 ;; =================================================
 ;; ESS
@@ -167,6 +152,23 @@
 (setq ess-indent-level 4)
 (define-key ess-r-mode-map "_" #'ess-insert-assign)
 (define-key inferior-ess-r-mode-map "_" #'ess-insert-assign)
+
+;; =================================================
+;; Polymode -- for editing Rmarkdown files
+;; =================================================
+;; (setq load-path
+;;       (append '("~/git/polymode/"  "~/git/polymode/modes")
+;;               load-path))
+(require 'poly-R)
+(require 'poly-markdown)
+(require 'poly-noweb)
+;;; MARKDOWN
+;; (add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
+
+;; ;;; R modes
+(add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
+(add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
+(add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
 
 ;; =================================================
 ;; IDO mode
@@ -251,11 +253,11 @@
 ;; =====================================================
 ;; Octave mode stuff
 ;; =====================================================
-(require 'ac-octave)
-    (defun ac-octave-mode-setup ()
-      (setq ac-sources '(ac-source-octave)))
-      (add-hook 'octave-mode-hook
-        '(lambda () (ac-octave-mode-setup)))
+;(require 'ac-octave)
+;    (defun ac-octave-mode-setup ()
+;      (setq ac-sources '(ac-source-octave)))
+;      (add-hook 'octave-mode-hook
+;        '(lambda () (ac-octave-mode-setup)))
 
 ;; =====================================================
 ;; Matlab mode stuff
@@ -264,7 +266,7 @@
 (add-to-list 'load-path "~/.emacs.d/matlab-mode/")
 ;;(require 'matlab-load)
 ;; Enable CEDET feature support for MATLAB code. (Optional)
-(matlab-cedet-setup)
+;(matlab-cedet-setup)
 (setq auto-mode-alist
     (cons
      '("\\.m$" . matlab-mode)
@@ -279,8 +281,8 @@
 	  (lambda ()
 	    (auto-complete-mode t)
 	    (add-to-list 'ac-sources 'ac-source-dictionary)))
-(add-to-list 'ac-modes 'matlab-mode)
-(add-to-list 'ac-modes 'matlab-shell-mode)
+;(add-to-list 'ac-modes 'matlab-mode)
+;(add-to-list 'ac-modes 'matlab-shell-mode)
 
 ;; =====================================================
 ;; Sublimity
