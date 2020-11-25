@@ -29,6 +29,8 @@
                 display-buffer-pop-up-window)
                (window-height . 20)))
 
+(setq-default fill-column 80)
+
 ;; =================================================
 ;; Melpa
 ;; =================================================
