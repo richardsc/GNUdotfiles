@@ -35,7 +35,7 @@
 ;; Melpa
 ;; =================================================
 (require 'package)
-(setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")
+(setq package-archives '(("melpa" . "http://melpa.org/packages/")
 			 ("melpa-stable" . "https://stable.melpa.org/packages/")
 			 ("gnu" . "http://elpa.gnu.org/packages/")))
 ;; (add-to-list 'package-archives
@@ -152,8 +152,8 @@
 ;;(setq ess-use-auto-complete t)
 (ess-set-style 'RStudio)
 (setq ess-indent-level 4)
-(define-key ess-r-mode-map "_" #'ess-insert-assign)
-(define-key inferior-ess-r-mode-map "_" #'ess-insert-assign)
+;(define-key ess-r-mode-map "_" #'ess-insert-assign)
+;(define-key inferior-ess-r-mode-map "_" #'ess-insert-assign)
 
 ;; =================================================
 ;; Polymode -- for editing Rmarkdown files
