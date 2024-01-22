@@ -142,3 +142,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Z
+source ~/bin/z.sh
