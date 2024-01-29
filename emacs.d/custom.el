@@ -5,22 +5,28 @@
  ;; If there is more than one, they won't work right.
  '(LaTeX-command "latex -synctex=1")
  '(TeX-PDF-mode t)
- '(TeX-view-program-list '(("mupdf" "mupdf %o") ("Skim" "open -a Skim.app %o")))
+ '(TeX-view-program-list
+   (quote
+    (("mupdf" "mupdf %o")
+     ("Skim" "open -a Skim.app %o"))))
  '(TeX-view-program-selection
-   '(((output-dvi style-pstricks)
+   (quote
+    (((output-dvi style-pstricks)
       "dvips and gv")
      (output-dvi "xdvi")
      (output-pdf "mupdf")
-     (output-html "xdg-open")))
+     (output-html "xdg-open"))))
  '(ansi-color-names-vector
    ["black" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "white"])
  '(bm-repository-file "/Users/richardsc/Dropbox/emacs/bm-repository")
  '(column-number-mode t)
- '(custom-enabled-themes '(tsdh-dark))
+ '(custom-enabled-themes (quote (tsdh-dark)))
  '(custom-safe-themes
-   '("cd70962b469931807533f5ab78293e901253f5eeb133a46c2965359f23bfb2ea" default))
+   (quote
+    ("cd70962b469931807533f5ab78293e901253f5eeb133a46c2965359f23bfb2ea" default)))
  '(ess-R-font-lock-keywords
-   '((ess-R-fl-keyword:modifiers . t)
+   (quote
+    ((ess-R-fl-keyword:modifiers . t)
      (ess-R-fl-keyword:fun-defs . t)
      (ess-R-fl-keyword:keywords . t)
      (ess-R-fl-keyword:assign-ops . t)
@@ -30,18 +36,19 @@
      (ess-fl-keyword:operators)
      (ess-fl-keyword:delimiters . t)
      (ess-fl-keyword:= . t)
-     (ess-R-fl-keyword:F&T)))
- '(ess-pdf-viewer-pref '("mupdf"))
- '(ess-swv-pdflatex-commands '("pdflatex" "make" "texi2pdf"))
- '(ess-swv-processor 'knitr)
+     (ess-R-fl-keyword:F&T))))
+ '(ess-pdf-viewer-pref (quote ("mupdf")))
+ '(ess-swv-pdflatex-commands (quote ("pdflatex" "make" "texi2pdf")))
+ '(ess-swv-processor (quote knitr))
  '(inhibit-startup-screen t)
  '(matlab-auto-fill nil)
  '(matlab-comment-region-s "% ")
  '(matlab-fill-code nil)
  '(package-selected-packages
-   '(company-math flyspell-correct flyspell-correct-popup pandoc company-bibtex company-auctex company poly-R poly-markdown poly-noweb poly-org undo-tree sublimity powerline polymode pandoc-mode matlab-mode markdown-mode lorem-ipsum ido-vertical-mode flycheck ess edit-server bm auctex ac-octave ac-math))
+   (quote
+    (powerline company-math flyspell-correct flyspell-correct-popup pandoc company-bibtex company-auctex company poly-R poly-markdown poly-noweb poly-org undo-tree sublimity polymode pandoc-mode matlab-mode markdown-mode lorem-ipsum ido-vertical-mode flycheck ess edit-server bm auctex ac-octave ac-math)))
  '(show-paren-mode t)
- '(text-mode-hook '(text-mode-hook-identify))
+ '(text-mode-hook (quote (text-mode-hook-identify)))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

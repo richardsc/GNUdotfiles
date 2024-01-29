@@ -56,7 +56,6 @@
 
 ;; Powerline
 ;; https://emacs.stackexchange.com/questions/281/how-do-i-get-a-fancier-looking-mode-line
-(add-to-list 'load-path "~/.emacs.d/elpa/powerline-20150319.533")
 (require 'powerline)
 (set-face-attribute 'mode-line nil
                     :foreground "Black"
@@ -152,8 +151,10 @@
 ;;(setq ess-use-auto-complete t)
 (ess-set-style 'RStudio)
 (setq ess-indent-level 4)
-;(define-key ess-r-mode-map "_" #'ess-insert-assign)
-;(define-key inferior-ess-r-mode-map "_" #'ess-insert-assign)
+(define-key ess-r-mode-map "_" #'ess-insert-assign)
+(define-key inferior-ess-r-mode-map "_" #'ess-insert-assign)
+;; Startup directory default to file directory (see: https://github.com/emacs-ess/ESS/issues/1187#issuecomment-1038360149)
+(setq ess-startup-directory 'default-directory)
 
 ;; =================================================
 ;; Polymode -- for editing Rmarkdown files
