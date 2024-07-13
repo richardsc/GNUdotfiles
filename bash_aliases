@@ -1,5 +1,6 @@
 export PATH=${PATH}:~/bin
-export EDITOR='/usr/bin/emacs -q'
+export PATH=${PATH}:~/.cargo/bin
+export EDITOR='vi'
 
 alias ls='ls -GF'
 alias ll='ls -lGFh'
@@ -29,10 +30,10 @@ alias jupyter-notebook='~/.local/bin/jupyter-notebook --no-browser'
 
 # Show git branch and status at bash prompt
 function parse_git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo "*"
+    [[ $(git status 2>/dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo "*"
 }
 function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
+    git branch --no-color 2>/dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
 
 MKL_NUM_THREADS=1
@@ -48,15 +49,15 @@ export MKL_NUM_THREADS
 
 # function to detect if a README* file is present in current directory
 function detect_readme {
-    test=`ls | grep README | wc -l`
+    test=$(ls | grep README | wc -l)
     if [ $test -gt 0 ]; then
-	echo "[RM]"
+        echo "[RM]"
     fi
 }
 
-function last_two_dirs {                                                        
-pwd |rev| awk -F / '{print $1,$2}' | rev | sed s_\ _/_                          
-} 
+function last_two_dirs {
+    pwd | rev | awk -F / '{print $1,$2}' | rev | sed s_\ _/_
+}
 
 ## export PS1='\h:\[\033[1;33m\]\W\[\033[0m\]'
 export PS1='\h:\[\033[1;34m\]$(last_two_dirs)/\[\033[0m\]'
@@ -68,4 +69,3 @@ export PS1="$PS1$ "
 
 #Bashmarks
 source ~/bin/bashmarks.sh
-
