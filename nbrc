@@ -13,6 +13,7 @@
 # https://github.com/xwmx/nb
 ###############################################################################
 
-export EDITOR="vim" # Set by `nb` • Wed Jan 31 07:50:46 AST 2024
 
 export NB_LIMIT="${NB_LIMIT:-25}" # Set by `nb` • Thu Mar  7 16:29:04 AST 2024
+
+export EDITOR="nvim" # Set by `nb` • Wed 17 Jul 2024 01:37:24 PM ADT
