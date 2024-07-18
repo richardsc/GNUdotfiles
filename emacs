@@ -42,6 +42,9 @@
 ;;              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
 
+;; Use catppuccin theme
+(load-theme 'catppuccin :no-confirm)
+
 ;; Highlight and visual line mode
 (global-hl-line-mode 1)
 (global-visual-line-mode 1)
