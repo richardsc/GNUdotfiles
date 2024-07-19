@@ -42,6 +42,11 @@
 ;;              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
 
+;; Catppuccin theme
+(load-theme 'catppuccin :no-confirm)
+(setq catppuccin-flavor 'mocha) ;; or 'latte, 'macchiato, or 'mocha
+(catppuccin-reload)
+
 ;; Highlight and visual line mode
 (global-hl-line-mode 1)
 (global-visual-line-mode 1)
