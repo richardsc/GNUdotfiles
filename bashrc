@@ -144,3 +144,5 @@ unset __conda_setup
 
 # Z
 source ~/bin/z.sh
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
