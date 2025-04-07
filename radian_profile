@@ -6,3 +6,4 @@ options(radian.escape_key_map = list(
 # either  `"emacs"` (default) or `"vi"`.
 options(radian.editing_mode = "emacs")
 
+options(radian.insert_new_line = FALSE)
