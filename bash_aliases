@@ -1,5 +1,6 @@
 export PATH=${PATH}:~/bin
 export PATH=${PATH}:~/.cargo/bin
+export PATH=${PATH}:/usr/local/texlive/2025/bin/x86_64-linux
 export EDITOR='vi'
 
 alias ls='ls -GF'
