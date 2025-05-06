@@ -30,6 +30,7 @@ alias netmon='lsof -P -i -n | cut -f 1 -d " " | uniq'
 alias boce='g oce; git pl; cd ..; make oce'
 alias r='radian'
 alias jupyter-notebook='~/.local/bin/jupyter-notebook --no-browser'
+alias restart='cd /mnt/c/ && cmd.exe /c start "rebooting WSL" cmd /c "timeout 5 && wsl -d $WSL_DISTRO_NAME" && wsl.exe --terminate $WSL_DISTRO_NAME'
 
 # Show git branch and status at bash prompt
 function parse_git_dirty {
