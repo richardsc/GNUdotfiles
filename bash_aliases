@@ -9,6 +9,7 @@ alias less='less -eX'
 alias hh='history 20'
 
 # Application aliases
+alias nv='NVIM_APPNAME=nvimtest nvim'
 alias tig='tig --word-diff'
 alias lg='lazygit'
 alias pbcopy='xsel --clipboard --input'
