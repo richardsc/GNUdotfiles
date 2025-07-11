@@ -30,3 +30,5 @@
 	default = current
 [credential]
 	helper = cache
+[init]
+	defaultBranch = main
