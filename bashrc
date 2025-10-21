@@ -118,7 +118,7 @@ fi
 
 ##-------------------------------------------------
 # add x11 server:
-DISPLAY=:0.0
+DISPLAY=localhost:0.0
 export DISPLAY
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
