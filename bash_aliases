@@ -65,6 +65,48 @@ function last_two_dirs {
     pwd | rev | awk -F / '{print $1,$2}' | rev | sed s_\ _/_
 }
 
+fixdns() {
+  tmpfile=$(mktemp)
+
+  powershell.exe -NoProfile -Command "
+  \$ErrorActionPreference = 'Stop';
+
+  # Find interface used for default route
+  \$iface = Get-NetRoute -DestinationPrefix '0.0.0.0/0' |
+    Sort-Object RouteMetric |
+    Select-Object -First 1 -ExpandProperty InterfaceIndex;
+
+  # Get DNS servers for that interface
+  \$dns = Get-DnsClientServerAddress -InterfaceIndex \$iface -AddressFamily IPv4;
+
+  # Get connection-specific suffix
+  \$suffix = (Get-DnsClient -InterfaceIndex \$iface).ConnectionSpecificSuffix;
+
+  # Output in resolv.conf format
+  if (\$suffix) { Write-Output \"search \$suffix\" }
+
+  foreach (\$addr in \$dns.ServerAddresses) {
+    if (\$addr) { Write-Output \"nameserver \$addr\" }
+  }
+  " | tr -d '\r' > "$tmpfile"
+
+  # Fallback if Windows gave nothing (rare but happens on VPN transitions)
+  if ! grep -q '^nameserver' "$tmpfile"; then
+    echo "nameserver 1.1.1.1" >> "$tmpfile"
+    echo "nameserver 8.8.8.8" >> "$tmpfile"
+  fi
+
+  # Only update if changed (prevents useless sudo prompts)
+  if ! cmp -s "$tmpfile" /etc/resolv.conf 2>/dev/null; then
+    echo "Updating /etc/resolv.conf"
+    sudo cp "$tmpfile" /etc/resolv.conf
+  else
+    echo "DNS unchanged"
+  fi
+
+  rm -f "$tmpfile"
+}
+
 ## export PS1='\h:\[\033[1;33m\]\W\[\033[0m\]'
 export PS1='\h:\[\033[1;34m\]$(last_two_dirs)/\[\033[0m\]'
 export PS1="$PS1\$(parse_git_branch)"
